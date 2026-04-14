@@ -1,0 +1,3 @@
+Status code: 200
+Response text: {"success":true,"user":{"email":"0321cce508e344449a7490711022208b@example.com","name":"Heather Potter"},"accessToken":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZGU5YTdjOTg0MjcwMDAxYmU4MmE0OSIsImlhdCI6MTc3NjE5NjIyMCwiZXhwIjoxNzc2MTk3NDIwfQ.fW6Mjj-FvbS2mXC0-hsrbJuGLN30PleYkzwS0hcRTm8","refreshToken":"fc3d2286a3f0602b401f6e4a4f081a045e86ca71f3d9f6aaf0f413c5eb5cdf69aa53dec700a7c66c"}
+=== Номер заказа: '371826' ===

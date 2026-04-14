@@ -1,0 +1,2 @@
+Status code: 200
+Response text: {"success":true,"user":{"email":"a02744a9bfc94a919c8e150c128bb410@example.com","name":"Daniel Gray"},"accessToken":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZGU5YWM1OTg0MjcwMDAxYmU4MmE2NCIsImlhdCI6MTc3NjE5NjI5MywiZXhwIjoxNzc2MTk3NDkzfQ.Eq3GLVu4o-csLdLIspgGVfoARGun7AUgQsvi0Kt9zlg","refreshToken":"7b3c6aa56e026826dbc50208092a8dce4cdd8bc2d09613ddfa0f289529038ff1434c6e8f8ba17834"}

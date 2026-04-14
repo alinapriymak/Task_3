@@ -1,0 +1,2 @@
+Status code: 200
+Response text: {"success":true,"user":{"email":"7cb78baf8ac34f6b8cb175fb24e16fb0@example.com","name":"Danielle Mathews"},"accessToken":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZGU5OTkyOTg0MjcwMDAxYmU4MjlmYiIsImlhdCI6MTc3NjE5NTk4NiwiZXhwIjoxNzc2MTk3MTg2fQ.uovisfye_G7kvU6jTA1nU4hS64ZcFvAuQTfzKCNSR2k","refreshToken":"79f34880bc607449e8b6f2b32189bee74c7d4dbc2dbb266fd4366837c53be9b8b70847caf087bf57"}

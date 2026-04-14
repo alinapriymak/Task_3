@@ -1,0 +1,2 @@
+Status code: 200
+Response text: {"success":true,"user":{"email":"08999b6bc6224aa28bb6bebf0b41ef86@example.com","name":"Michael Kim"},"accessToken":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZGU5OWJkOTg0MjcwMDAxYmU4MmEwZCIsImlhdCI6MTc3NjE5NjAyOSwiZXhwIjoxNzc2MTk3MjI5fQ.ZvCDIqcwBIDGlcy-vCXzGqhy1KByEWPEtYalbWdWGm8","refreshToken":"3408acb03fe994beb7e03689fb6de027a44900bfefb08c04cef702f8d5125d3adc18e8ba3fa68991"}

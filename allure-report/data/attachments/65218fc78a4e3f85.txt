@@ -1,0 +1,2 @@
+Status code: 200
+Response text: {"success":true,"user":{"email":"edfc831764034e1480e9be453cd199bb@example.com","name":"Isaiah Whitaker"},"accessToken":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZGU5OWU4OTg0MjcwMDAxYmU4MmExZiIsImlhdCI6MTc3NjE5NjA3MiwiZXhwIjoxNzc2MTk3MjcyfQ.KZxhYW4aTPJUNphU-CimmjqI3gAkNApjiR27aY_97u4","refreshToken":"5a38501a226ce04822d3808167ba6c6676c5a210538ab62443f24fe39f2991a6515cfd193a8f7a84"}

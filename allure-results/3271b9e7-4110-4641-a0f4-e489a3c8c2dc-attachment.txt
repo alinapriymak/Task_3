@@ -1,0 +1,2 @@
+Status code: 200
+Response text: {"success":true,"user":{"email":"6e3fa0b9d6bd469482a20735aa719c8a@example.com","name":"Billy Mills"},"accessToken":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZGU5OWIyOTg0MjcwMDAxYmU4MmEwOSIsImlhdCI6MTc3NjE5NjAxOCwiZXhwIjoxNzc2MTk3MjE4fQ.DyWavI9mu8HqdEFZDj_Hg4HW_ZoMS1ncGNh2pEA_Q0s","refreshToken":"dfecfe85c40814bd29e33e172617579c7a2ea1b41e5d363739c443ec8693afa5ca888cb82cd7d1bc"}

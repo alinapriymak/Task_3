@@ -1,0 +1,2 @@
+Status code: 200
+Response text: {"success":true,"user":{"email":"b6aace31b7e840cdb1025624281e60ab@example.com","name":"Jason Grant"},"accessToken":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZGU5YTY4OTg0MjcwMDAxYmU4MmE0MSIsImlhdCI6MTc3NjE5NjIwMCwiZXhwIjoxNzc2MTk3NDAwfQ.URPGzGa_rVPfeKAA7aM-G9w9XJLoSfWUkSrXviPsSgc","refreshToken":"ef738981f9f800fc97848a9734c795deb88001d1d04d6595eddbaa296b5315325c060372779922a6"}

@@ -1,0 +1,2 @@
+Status code: 200
+Response text: {"success":true,"user":{"email":"e42d2b30ca094f168edf035951b5dcfc@example.com","name":"Brett Weaver"},"accessToken":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZGU5YWM5OTg0MjcwMDAxYmU4MmE2NyIsImlhdCI6MTc3NjE5NjI5NywiZXhwIjoxNzc2MTk3NDk3fQ.vu0G4Lsux6REz2acO4wWyhqIbbksAlLlPVr_ua-_CFo","refreshToken":"f8a8eb1e976e9072fdce809cd97789a847533d73eaa112552eb8bf7ed43a8d93576609ac2cb6a59b"}
