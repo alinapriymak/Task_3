@@ -16,20 +16,21 @@ class TestPasswordRecovery:
         login_page.open(login_page.url)
         login_page.click_forgot_password()
         
-        assert driver.current_url == forgot_password_page.url
+        assert forgot_password_page.is_forgot_password_page() 
 
     
     @allure.title("Проверка ввода почты и клика по кнопке «Восстановить»")
     def test_enter_email_and_click_recover(self, driver):
         login_page = LoginPage(driver)
         forgot_password_page = ForgotPasswordPage(driver)
+        reset_password_page = ResetPasswordPage(driver)
         
         login_page.open(login_page.url)
         login_page.click_forgot_password()
         forgot_password_page.enter_email(TestData.VALID_EMAIL)
         forgot_password_page.click_recover_button()
         
-        assert "reset-password" in driver.current_url
+        assert reset_password_page.is_reset_password_page()
 
     
     @allure.title("Проверка активации поля пароля при клике на кнопку показать/скрыть")

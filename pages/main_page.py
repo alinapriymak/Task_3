@@ -34,14 +34,22 @@ class MainPage(BasePage):
     
     @allure.step("Дождаться успешной авторизации")
     def wait_for_successful_login(self):
-        """Ожидает редирект на главную после авторизации"""
-        self.wait.until(EC.url_contains("stellarburgers"))
+        self.wait.until(EC.url_to_be(MAIN_PAGE))
+    
 
+    @allure.step("Дождаться перехода на главную страницу")
+    def wait_for_main_page(self):
+        self.wait.until(EC.url_to_be(self.url))
+        return self.driver.current_url == self.url
+    
+    
+    @allure.step("Проверить, что текущий URL содержит 'feed'")
+    def is_feed_url(self):
+        return "feed" in self.driver.current_url
 
     
     @allure.step("Кликнуть на ингредиент 'Булка'")
     def click_bun_ingredient(self):
-        """Клик по ингредиенту для открытия модального окна"""
         element = self.wait.until(EC.element_to_be_clickable(MainPageLocators.BUN_INGREDIENT))
         self.driver.execute_script("arguments[0].click();", element)
 
@@ -56,51 +64,11 @@ class MainPage(BasePage):
         self.click(MainPageLocators.FILLING_INGREDIENT)
 
     
-    # @allure.step("Перетащить булку в корзину")
-    # def drag_bun_to_basket(self):
-    #     source = self.find_element(MainPageLocators.BUN_INGREDIENT)
-    #     target = self.find_element(MainPageLocators.BASKET_CONTAINER)
-    
-    #     # Прокручиваем к целевому элементу
-    #     self.driver.execute_script("arguments[0].scrollIntoView(true);", target)
-    #     time.sleep(0.5)
-    
-    #     # Прокручиваем к источнику
-    #     self.driver.execute_script("arguments[0].scrollIntoView(true);", source)
-    #     time.sleep(0.5)
-    
-    #     # Выполняем drag-and-drop
-    #     action_chains = ActionChains(self.driver)
-    #     action_chains.drag_and_drop(source, target).perform()
-    #     time.sleep(5)
-
-
-    
-    # @allure.step("Перетащить соус в корзину")
-    # def drag_sauce_to_basket(self):
-    #     source = self.find_element(MainPageLocators.SAUCE_INGREDIENT)
-    #     target = self.find_element(MainPageLocators.BASKET_CONTAINER)
-        
-    #     action_chains = ActionChains(self.driver)
-    #     action_chains.drag_and_drop(source, target).perform()
-        
-    
-    # @allure.step("Перетащить начинку в корзину")
-    # def drag_filling_to_basket(self):
-    #     source = self.find_element(MainPageLocators.FILLING_INGREDIENT)
-    #     target = self.find_element(MainPageLocators.BASKET_CONTAINER)
-        
-    #     action_chains = ActionChains(self.driver)
-    #     action_chains.drag_and_drop(source, target).perform()
-
-    
     @allure.step("Закрыть модальное окно с деталями ингредиента")
     def close_ingredient_modal(self):
     
         close_btn = self.wait.until(EC.presence_of_element_located(MainPageLocators.CLOSE_MODAL_BTN))
-        # print(f"Найдена кнопка закрытия: {close_btn.get_attribute('outerHTML')[:200]}")
     
-        # Пробуем кликнуть
         self.driver.execute_script("arguments[0].click();", close_btn)
         time.sleep(0.5)
 
@@ -140,25 +108,6 @@ class MainPage(BasePage):
         element = self.find_element(MainPageLocators.FILLING_COUNTER)
         return int(element.text) if element.text else 0
     
-    
-    # @allure.step("Добавить булку в заказ")
-    # def add_bun_to_order(self):
-    #     element = self.find_element(MainPageLocators.BUN_INGREDIENT)
-    #     self.driver.execute_script("arguments[0].click();", element)
-
-    
-    # @allure.step("Добавить соус в заказ")
-    # def add_sauce_to_order(self):
-    #     element = self.find_element(MainPageLocators.SAUCE_INGREDIENT)
-    #     self.driver.execute_script("arguments[0].click();", element)
-
-    
-    # @allure.step("Добавить начинку в заказ")
-    # def add_filling_to_order(self):
-    #     element = self.find_element(MainPageLocators.FILLING_INGREDIENT)
-    #     self.driver.execute_script("arguments[0].click();", element)
-
-    
     @allure.step("Оформить заказ")
     def checkout_order(self):
         self.click(MainPageLocators.CHECKOUT_BTN)
@@ -194,7 +143,7 @@ class MainPage(BasePage):
         time.sleep(0.5)
     
     
-    # Добавлен метод для эмуляции перетскивания ингредиентов в корзину для Firefox, 
+    # Добавлен метод для эмуляции перетаскивания ингредиентов в корзину для Firefox, 
     # поскольку там есть проблемы с drag-and-drop в Selenium
     def _drag_and_drop_js(self, source, target):
         """Эмуляция drag-and-drop через JavaScript для Firefox"""

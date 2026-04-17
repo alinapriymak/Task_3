@@ -4,9 +4,6 @@ from pages.login_page import LoginPage
 from pages.order_feed_page import OrderFeedPage
 from pages.order_history_page import OrderHistoryPage
 from pages.personal_account_page import PersonalAccountPage
-from locators.main_page_locators import MainPageLocators
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 
 
 @allure.feature("Лента заказов")

@@ -2,8 +2,6 @@ import allure
 from pages.main_page import MainPage
 from pages.login_page import LoginPage
 from locators.main_page_locators import MainPageLocators
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from utils.urls import MAIN_PAGE
 
 @allure.feature("Основной функционал")
@@ -23,8 +21,7 @@ class TestConstructor:
             main_page.click_constructor()
         
         with allure.step("Проверить, что произошел возврат в Конструктор"):
-            WebDriverWait(driver, 10).until(EC.url_to_be(MAIN_PAGE))
-            assert driver.current_url == MAIN_PAGE
+            assert main_page.wait_for_main_page()
 
     
     @allure.title("Переход в «Лента заказов»")
@@ -38,7 +35,7 @@ class TestConstructor:
             main_page.click_order_feed()
         
         with allure.step("Проверить, что URL содержит 'feed'"):
-            assert "feed" in driver.current_url
+            assert main_page.is_feed_url()
 
     
     @allure.title("Открытие всплывающего окна с деталями ингредиента")

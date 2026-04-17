@@ -20,3 +20,8 @@ class ForgotPasswordPage(BasePage):
         WebDriverWait(self.driver, 10).until(
             EC.url_contains("reset-password")
         )
+
+
+    @allure.step("Проверить, что открыта страница восстановления пароля")
+    def is_forgot_password_page(self):
+        return "forgot-password" in self.driver.current_url

@@ -17,3 +17,8 @@ class ResetPasswordPage(BasePage):
     @allure.step("Ввести новый пароль")
     def enter_new_password(self, password):
         self.input_text(ResetPasswordPageLocators.PASSWORD_INPUT, password)
+
+
+    @allure.step("Проверить, что открыта страница сброса пароля")
+    def is_reset_password_page(self):
+        return "reset-password" in self.driver.current_url

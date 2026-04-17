@@ -87,4 +87,4 @@ class TestPersonalAccount:
             personal_account_page.click_logout()
         
         with allure.step("Проверить, что произошел переход на страницу логина"):
-            assert "login" in driver.current_url
+            assert login_page.is_login_page()

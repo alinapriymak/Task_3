@@ -39,3 +39,8 @@ class LoginPage(BasePage):
     def is_user_logged_in(self):
         return self.is_element_visible(MainPageLocators.CHECKOUT_BTN)
     
+
+    @allure.step("Проверить, что открыта страница логина")
+    def is_login_page(self):
+        return "login" in self.driver.current_url
+    

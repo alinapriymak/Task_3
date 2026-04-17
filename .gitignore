@@ -54,5 +54,5 @@ Thumbs.db
 *.log
 
 # Reports
-report.html
+allure-results
 assets/
