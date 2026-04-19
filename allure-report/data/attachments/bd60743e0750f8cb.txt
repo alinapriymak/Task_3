@@ -1,0 +1,2 @@
+Status code: 200
+Response text: {"success":true,"user":{"email":"65ebaffe5c2442efa94a439c25ed028e@example.com","name":"Anna Miller"},"accessToken":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZGU5OTlhOTg0MjcwMDAxYmU4MmEwMSIsImlhdCI6MTc3NjE5NTk5NCwiZXhwIjoxNzc2MTk3MTk0fQ.IZiFzG0CbaDIu8h8tp07fk6EIdGytNF4pmXbw32vyQ8","refreshToken":"4af7c0c0a1ae1124e9f80666c3d4916691aa9df69ec53478060a60e3bd06455347346bf6848a10b7"}

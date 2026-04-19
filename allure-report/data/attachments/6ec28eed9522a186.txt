@@ -1,0 +1,3 @@
+Status code: 200
+Response text: {"success":true,"user":{"email":"0ee8c0a6cce748299daa36a37ed72661@example.com","name":"Jennifer Collins"},"accessToken":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZGU5OWE0OTg0MjcwMDAxYmU4MmEwNSIsImlhdCI6MTc3NjE5NjAwNCwiZXhwIjoxNzc2MTk3MjA0fQ.1G7jOWMAxRqmayQBm8IzfbreFBL3dmL6yYfc4Brngp8","refreshToken":"5d349a9edbac73eb848854a94acd9e2a765908136e3a59509c91d64be827c7696106c32150c9ee72"}
+=== Номер заказа: '371816' ===

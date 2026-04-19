@@ -1,0 +1,2 @@
+Status code: 200
+Response text: {"success":true,"user":{"email":"87e353bca9c6441eb64ce3734bd6253b@example.com","name":"Shannon Crawford"},"accessToken":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZGU5YTk5OTg0MjcwMDAxYmU4MmE1MyIsImlhdCI6MTc3NjE5NjI0OSwiZXhwIjoxNzc2MTk3NDQ5fQ.xqf_aYC93WWKbW6cw5UkmLLAsVTgX37d-Hdv5nNgu1s","refreshToken":"14cd93f2b215bdc4c6e1686dd3dd88a0de4651e5467f866a157c34e270945f5602f91ae1de2662f2"}

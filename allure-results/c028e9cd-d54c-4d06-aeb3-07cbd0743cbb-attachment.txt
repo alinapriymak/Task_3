@@ -1,0 +1,2 @@
+Status code: 200
+Response text: {"success":true,"user":{"email":"4aa2d6e9218140139cbc82a7644e59ba@example.com","name":"Laura Franklin"},"accessToken":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZGU5OWYyOTg0MjcwMDAxYmU4MmEyOCIsImlhdCI6MTc3NjE5NjA4MiwiZXhwIjoxNzc2MTk3MjgyfQ.W_PlgbWGEr_ZnnKetToUj2iTZXVLQfqyo3HNPrvklms","refreshToken":"25e00f0f8a4161d786e49682b4d6d25149dc44f26ea5ddea7f480441042123d90f71b45b34f9c9e1"}
