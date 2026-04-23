@@ -76,7 +76,6 @@ class TestOrderFeed:
             feed_orders = order_feed_page.get_order_numbers_in_feed()
         
         with allure.step("Проверить, что заказ отображается в ленте"):
-            feed_orders = order_feed_page.get_order_numbers_in_feed()
             assert order_number in feed_orders
 
     

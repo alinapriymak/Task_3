@@ -6,14 +6,18 @@ import allure
 
 def pytest_addoption(parser):
     """Добавление опции командной строки для выбора браузера"""
-    parser.addoption("--browser", action="store", default="chrome", 
+    parser.addoption("--selenium-browser", action="store", default="chrome", 
                      help="Browser: chrome or firefox")
+    parser.addoption("--headless-mode", action="store_true", default=False,
+                     help="Run browser in headless mode")
 
 @pytest.fixture(scope="function")
 def driver(request):
     """Фикстура для создания драйвера браузера"""
-    browser = request.config.getoption("--browser")
-    driver = BrowserFactory.get_driver(browser)
+    browser = request.config.getoption("--selenium-browser")
+    no_headless = request.config.getoption("--headless-mode")
+    headless = not no_headless
+    driver = BrowserFactory.get_driver(browser, headless)
     driver.maximize_window()
 
     if browser.lower() == "firefox":
