@@ -5,6 +5,7 @@ from locators.main_page_locators import MainPageLocators
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
 import time
+from seletools.actions import drag_and_drop
 
 
 class MainPage(BasePage):
@@ -118,68 +119,12 @@ class MainPage(BasePage):
         return self.is_element_visible(MainPageLocators.CHECKOUT_BTN)
     
 
-    @allure.step("Перетащить элемент в корзину (универсальный метод)")
+    @allure.step("Перетащить элемент в корзину (метод через seletools)")
     def drag_to_basket(self, source_locator, target_locator):
         source = self.find_element(source_locator)
         target = self.find_element(target_locator)
-        
-        # Прокручиваем к элементам
-        self.driver.execute_script("arguments[0].scrollIntoView(true);", target)
-        time.sleep(0.3)
-        self.driver.execute_script("arguments[0].scrollIntoView(true);", source)
-        time.sleep(0.3)
-        
-        # Определяем браузер
-        browser_name = self.driver.capabilities['browserName'].lower()
-        
-        if browser_name == 'firefox':
-            # Для Firefox используем JavaScript эмуляцию
-            self._drag_and_drop_js(source, target)
-        else:
-            # Для Chrome используем ActionChains
-            action_chains = ActionChains(self.driver)
-            action_chains.drag_and_drop(source, target).perform()
-        
-        time.sleep(0.5)
-    
-    
-    # Добавлен метод для эмуляции перетаскивания ингредиентов в корзину для Firefox, 
-    # поскольку там есть проблемы с drag-and-drop в Selenium
-    def _drag_and_drop_js(self, source, target):
-        """Эмуляция drag-and-drop через JavaScript для Firefox"""
-        js_code = """
-        function simulateDragDrop(source, target) {
-            // Создаем события
-            var dragStartEvent = new DragEvent('dragstart', {
-                bubbles: true,
-                cancelable: true,
-                dataTransfer: new DataTransfer()
-            });
-            var dragOverEvent = new DragEvent('dragover', {
-                bubbles: true,
-                cancelable: true,
-                dataTransfer: new DataTransfer()
-            });
-            var dropEvent = new DragEvent('drop', {
-                bubbles: true,
-                cancelable: true,
-                dataTransfer: new DataTransfer()
-            });
-            var dragEndEvent = new DragEvent('dragend', {
-                bubbles: true,
-                cancelable: true,
-                dataTransfer: new DataTransfer()
-            });
-            
-            // Диспатчим события
-            source.dispatchEvent(dragStartEvent);
-            target.dispatchEvent(dragOverEvent);
-            target.dispatchEvent(dropEvent);
-            source.dispatchEvent(dragEndEvent);
-        }
-        simulateDragDrop(arguments[0], arguments[1]);
-        """
-        self.driver.execute_script(js_code, source, target)
+
+        drag_and_drop(self.driver, source, target)
 
     
     @allure.step("Перетащить булку в корзину")
